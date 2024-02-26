@@ -1,17 +1,10 @@
-// import { FormEvent } from 'react';
 import { Form, Input, Button } from 'antd';
 import './App.css'
 
-// import { getCourses } from './api/client';
 import { login } from './api/auth';
 
 function App() {
   const [form] = Form.useForm();
-  // const [count, setCount] = useState(0)
-
-  // useEffect(() => {
-  //   getCourses();
-  // }, []);
 
   const onFinish = async () => {
     const access_token = await login(form.getFieldsValue())
